@@ -1,0 +1,9 @@
+@startuml
+InputStream -> Streambroker: Instrument
+InputStream -> Streambroker: Quote
+Streambroker -> InstrumentStore: AggregatedInstrument
+InstrumentBuffer <-- FrontendController: Instrument-Price retrival
+InstrumentBuffer --> InstrumentStore: getAggregatedInstruments
+InstrumentStore -> InstrumentBuffer: AggregatedInstruments
+InstrumentBuffer -> FrontendController: AggregatedInstruments
+@enduml

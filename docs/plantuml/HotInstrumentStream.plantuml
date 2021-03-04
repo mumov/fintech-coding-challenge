@@ -1,0 +1,9 @@
+@startuml
+InputStream -> Streambroker: Quote
+InputStream -> Streambroker: Instrument
+Streambroker -> CandleStickStore: TimedQuotes
+Streambroker <- CandleStickStore: HotInstrument ISIN
+Streambroker --> InstrumentStore: getHotInstrument
+Streambroker <-- InstrumentStore: HotInstrument
+Streambroker -> OutputStream: HotInstrument
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+node "Internal" {
+[StreamBroker] --> [InstrumentStore]
+[StreamBroker] --> [CandleStickStore]
+[StreamBroker] <-- [CandleStickStore]
+}
+@enduml

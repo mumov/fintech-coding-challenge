@@ -1,0 +1,8 @@
+@startuml
+InputStream -> Streambroker: Quote
+Streambroker -> CandleStickStore: TimedQuotes
+CandleStickBuffer <-- FrontendController: Aggregated Price-History retrieval
+CandleStickBuffer --> CandleStickStore: getCandleStickCharts
+CandleStickStore -> CandleStickBuffer: CandleStickCharts
+CandleStickBuffer -> FrontendController: Aggregated Price-History retrieval
+@enduml

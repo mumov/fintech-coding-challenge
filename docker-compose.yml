@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  quotes-system:
+    build: .
+    ports:
+      - 8888:8888
+      - 8082:8080
+
+  partner-service:
+    build: ./partnerService
+    ports:
+      - 8080:8080

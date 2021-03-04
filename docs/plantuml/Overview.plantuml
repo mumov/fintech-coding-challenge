@@ -1,0 +1,12 @@
+@startuml
+Input -> Internal: Instrument
+Input -> Internal: Quote
+== Instrument-Price retrieval ==
+Output --> Internal: getInstruments
+Internal -> Output : Instruments
+== Aggregated-Price History retrieval ==
+Output --> Internal: getCandlestickChart
+Internal -> Output : CandlestickChart
+== Hot Instrument stream ==
+Internal -> Output: HotInstruments
+@enduml

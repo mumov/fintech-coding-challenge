@@ -1,0 +1,7 @@
+@startuml
+node "Output" {
+[OutputStream]
+[FrontendController] --> [InstrumentBuffer]
+[FrontendController] --> [CandleStickBuffer]
+}
+@enduml
